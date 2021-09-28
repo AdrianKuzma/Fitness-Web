@@ -2,7 +2,7 @@ Fitness-Web
 
 Aplikácia, v ktorej budu rozpísane tréningove plány, cviky na rôzne svaloné partie, fitness recepty, doplnky výživy.
  
-Členovia Teamu:
+*Členovia Teamu:*
 - Adrián Kužma (BE)
 - Jozef Mravec (BE/FE)
 - Roman Kaláb (FE)
