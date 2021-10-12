@@ -46,3 +46,7 @@ Work Progress:
 - Pridávať finálne veci do aplikácie
 - Urobiť Login a Favorites
 
+![MainPage alt text](mainpage.png)
+![Treningy alt text](treningy.png)
+![Cviky alt text](cviky.png)
+![doplnky alt text](doplnky.png)
