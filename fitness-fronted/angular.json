@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fitness-web": {
+    "fitness-fronted": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fitness-web",
+            "outputPath": "dist/fitness-fronted",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fitness-web:build"
+            "browserTarget": "fitness-fronted:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fitness-web:build:production"
+              "browserTarget": "fitness-fronted:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fitness-web:build"
+            "browserTarget": "fitness-fronted:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fitness-web:serve"
+            "devServerTarget": "fitness-fronted:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fitness-web:serve:production"
+              "devServerTarget": "fitness-fronted:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "fitness-web"
+  "defaultProject": "fitness-fronted"
 }
