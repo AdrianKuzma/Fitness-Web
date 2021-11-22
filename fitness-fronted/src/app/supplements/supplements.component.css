@@ -1,0 +1,8 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://contents.mediadecathlon.com/p2006414/k8397231934536ccaf26259b8e166c6ea/2006414_default.jpg?format=auto&quality=70&f=800x0');
+  background-size: cover;
+}

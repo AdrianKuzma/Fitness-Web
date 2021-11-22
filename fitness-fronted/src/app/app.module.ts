@@ -8,6 +8,9 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { ExercisesComponent } from './exercises/exercises.component';
 import { TrainingComponent } from './training/training.component';
 import { SupplementsComponent } from './supplements/supplements.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SupplementsComponent } from './supplements/supplements.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
