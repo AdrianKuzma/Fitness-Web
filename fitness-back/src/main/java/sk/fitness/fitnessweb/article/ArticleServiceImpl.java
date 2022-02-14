@@ -2,6 +2,7 @@ package sk.fitness.fitnessweb.article;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,5 +29,16 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> getArticleByType(ArticleType type) {
         return this.repository.findByType(type);
     }
+
+    @Override
+    public List<Article> getExercisesFromCategory(Category category) {
+        return this.repository.findByCategory(category);
+    }
+
+    @Override
+    public List<Category> getCategories() {
+        return Arrays.asList(Category.values().clone());
+    }
+
 
 }

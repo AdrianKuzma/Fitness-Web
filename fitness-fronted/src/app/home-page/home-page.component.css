@@ -1,5 +1,19 @@
-img{
+.brichtabomby{
     float: right;
-    width: 27%;
-    height: 50%;
+    width: 29%;
+}
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    margin: 0;
+    background-image: url('../../assets/images/gym.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 }

@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.treningy{
+    font-family:'Poppins';
+    color: black;
+    padding: 60px 85px;
+    
+}
+.nadpis{
+    font-family:'Poppins';
+    text-align: center;
+    font-size: 30px;
+}
+.plan1{
+
+}
+.plan2{
+    margin-top: 60px;
+}
+.text{
+    font-size: 20px;
+}

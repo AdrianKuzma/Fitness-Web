@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
+
 import { ExercisesComponent } from './exercises.component';
+
+
 
 describe('ExercisesComponent', () => {
   let component: ExercisesComponent;
@@ -22,4 +26,5 @@ describe('ExercisesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

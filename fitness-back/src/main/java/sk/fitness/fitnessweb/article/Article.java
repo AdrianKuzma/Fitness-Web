@@ -16,6 +16,19 @@ public class Article {
     @Enumerated(EnumType.STRING)
     private ArticleType type;
 
+    private String image;
+
+    @Enumerated(EnumType.STRING)
+    private Category category;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public long getId() {
         return id;
     }
@@ -48,4 +61,11 @@ public class Article {
         this.type = type;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }

@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { CardComponent } from './card/card.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationBarComponent,
     ExercisesComponent,
     TrainingComponent,
-    SupplementsComponent
+    SupplementsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,17 @@
-<div>
-  <div *ngFor="let exercise of exercises$ | async">
-    <h2>{{ exercise.name }}</h2>
-    <img src="assets/benchpress.jpg">
-    <p>{{ exercise.description }}</p>
+  <div class="flexbox">
+    <mat-accordion>
+    <mat-expansion-panel *ngFor="let category of categoryList$ | async">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{category}}
+        </mat-panel-title>
+        <mat-panel-description>
+          Exercise
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-card [category]="category"></app-card>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
+<div class="hero-img"></div>
 
-  <h2>Mŕtvy ťah</h2>
-  <img src="assets/deadlift.jpg">
-  <p>
-    
-  </p>
-
-  <h2>Drep</h2>
-  <img src="assets/squat.jpg">
-  <p>
-    
-  </p>
-</div>
