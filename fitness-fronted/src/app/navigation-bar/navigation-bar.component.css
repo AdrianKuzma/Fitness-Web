@@ -15,7 +15,6 @@ a {
     font-size: 28px;
     color: #FFFFFF;
     text-align: center;
-    height: 31px;
     margin-left: 100px;
     text-decoration: none;
 }
@@ -24,15 +23,11 @@ p{
     font-size: 28px;
     color: #FFFFFF;
     text-align: center;
-    height: 31px;
-    margin-left: 100px;
 }
 
 .kripix {
-    width: 121.24px;
-    height: 38.02px;
     font-size: 36px;
-    margin-left: 0px;
+    margin: 0;
 }
 span {
     font-size: 28px;
@@ -41,15 +36,10 @@ span {
 }
 
 img {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
     margin-left: 70px;
-}
-
-.money {
-    display: flex;
-    align-items: center;
-
+    margin-right: 10px;
 }
 
 .spacer {
@@ -60,4 +50,9 @@ img {
     height: 28px;
     width: 28px;
     font-size: 28px;
+}
+.logo {
+    display:flex;
+    cursor: pointer;
+    align-items: center;
 }

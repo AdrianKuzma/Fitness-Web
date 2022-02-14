@@ -11,12 +11,11 @@ import { ArticleService } from '../article.service';
 })
 export class ExercisesComponent implements OnInit {
 
-  exercises$: Observable<Article[]>;
+  categoryList$: Observable<any[]>;
   
   constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
-    this.exercises$ = this.articleService.getArticlesByType(ArticleType.EXERCISES);
+    this.categoryList$ = this.articleService.getListOfCategories();
   }
-
 }

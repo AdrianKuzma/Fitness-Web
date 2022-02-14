@@ -28,4 +28,20 @@ public class ArticleController {
         return ResponseEntity.of(this.articleService.getArticleById(id));
     }
 
+    @GetMapping("/exercises/category")
+    public List<Article> getExercisesFromCategory(@RequestParam(required = false) Category category){
+        if(category != null){
+            return this.articleService.getExercisesFromCategory(category);
+        }
+        return this.articleService.getArticleByType(ArticleType.EXERCISES);
+    }
+
+    @GetMapping("/exercises/allCategories")
+    public List<Category> getListOfCategories(){
+        return articleService.getCategories();
+    }
+
+
+
+
 }
