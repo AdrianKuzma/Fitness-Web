@@ -1,12 +1,14 @@
 package sk.fitness.fitnessweb.article;
 
+import sk.fitness.fitnessweb.favourite.Favourite;
+
 import javax.persistence.*;
 
 @Entity
 public class Article {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
 
@@ -20,6 +22,10 @@ public class Article {
 
     @Enumerated(EnumType.STRING)
     private Category category;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "favourite_id",insertable = false,updatable = false)
+    private Favourite favourite;
 
     public String getImage() {
         return image;
@@ -68,4 +74,13 @@ public class Article {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public Favourite getFavourite() {
+        return favourite;
+    }
+
+    public void setFavourite(Favourite favourite) {
+        this.favourite = favourite;
+    }
+
 }
