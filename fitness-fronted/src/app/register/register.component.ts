@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+  error;
+  
 
-  ngOnInit(): void {
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void { // main funkcia komponentu
+    this.form = new FormGroup({
+      username: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl(''),
+    });
   }
 
+  submit() {
+    if (this.form.valid) {
+      // login na request na backend
+      this.authService.register(this.form.value.username, this.form.value.password).subscribe();
+    }
+  }
 }
