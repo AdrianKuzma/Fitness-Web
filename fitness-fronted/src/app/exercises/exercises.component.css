@@ -13,7 +13,8 @@ body{
   margin: 30px auto;
   justify-content: center;
 }
-.hero-img{
+
+.hero-bg{
   position: absolute;
   top: 0;
   left: 0;
@@ -21,8 +22,7 @@ body{
   bottom: 0;
   z-index: -10;
   margin: 0;
-  background-image: url('../../assets/images/gym.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  width: 1000px;
+
+
 }

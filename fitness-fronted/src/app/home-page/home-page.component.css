@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 .brichtabomby{
     float: right;
-    width: 29%;
+    width: 30%;
 }
 
 .hero-img{
@@ -15,5 +18,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
 }
+.nadpis{
+    color: white;
+    font-size: 3rem;
+    margin-top: 2em;
+    margin-left: 4.8em;
+    line-height: 3.3rem;
+    font-family:"Poppins", sans-serif;
+}
+.subhead{
+    font-family:"Poppins", sans-serif;
+    color: white;
+    margin-top: 1em;
+    margin-left: 9.9em;
+    font-size: 1.5rem;
+}
+.welcome{
+    height: 400px;
+    margin-top: 2em;
+    margin-left: 12em;
+    line-height: 3.3rem;
+}
+

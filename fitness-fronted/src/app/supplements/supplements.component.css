@@ -6,6 +6,7 @@ body{
 }
 .card-image {
   background-size: cover;
+  aspect-ratio: 1;
 }
 .example-header-image {
 
