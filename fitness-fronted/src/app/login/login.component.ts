@@ -22,9 +22,12 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
+    
     if (this.form.valid) {
+      
       // login na request na backend
       this.authService.login(this.form.value.username, this.form.value.password).subscribe();
+      
     }
   }
 

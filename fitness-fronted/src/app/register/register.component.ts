@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   submit() {
     if (this.form.valid) {
       // login na request na backend
-      this.authService.register(this.form.value.username, this.form.value.password).subscribe();
+      this.authService.register(this.form.value.username, this.form.value.password).subscribe(() => location.reload());
     }
   }
 }

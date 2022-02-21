@@ -8,12 +8,11 @@
     
 }
 .nadpis{
-    font-family:'Poppins';
     text-align: center;
     font-size: 30px;
 }
 .plan1{
-
+    margin-top: 60px;
 }
 .plan2{
     margin-top: 60px;
@@ -21,8 +20,53 @@
 .text{
     font-size: 20px;
 }
-.subhead{
-    margin-top: 1em;
+.text2{
+    font-size: 20px;
 }
-
-
+.subhead{
+    margin-top: 1.5em;
+}
+.pushpull{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-height: 350px;
+    object-fit: contain;
+    
+}
+.last{
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+.fullbody {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+.fullbodyplan{
+    margin-top: 1.5em;
+}
+li{
+  list-style: none;  
+}
+.pushpullimage{
+    position:absolute;
+    left: 0;
+    right: 0;
+    background-color: #E6E6E6;
+}
+.fullbodyimage{
+    position:absolute;
+    left: 0;
+    right: 0;
+    background-color: #E6E6E6;
+}
+.img-spacer{
+    height: 350px;
+}
+.img-spacer2{
+    height: 350px;
+}
