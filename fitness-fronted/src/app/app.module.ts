@@ -36,6 +36,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
     LoginComponent,
     RegisterComponent,
     FavoritesComponent
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +49,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

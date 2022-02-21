@@ -4,6 +4,8 @@
 .brichtabomby{
     float: right;
     width: 30%;
+    float: right;
+    width: 29%;
 }
 
 .hero-img{
@@ -40,4 +42,3 @@
     margin-left: 12em;
     line-height: 3.3rem;
 }
-

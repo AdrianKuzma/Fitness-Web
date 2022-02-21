@@ -10,16 +10,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import sk.fitness.fitnessweb.dto.RegisterDto;
+import sk.fitness.fitnessweb.favourite.FavouriteService;
 
 
 @RestController
 public class UserController {
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
+    private final FavouriteService favouriteService;
 
-    public UserController(UserService userService, PasswordEncoder passwordEncoder){
+    public UserController(UserService userService, PasswordEncoder passwordEncoder, FavouriteService favouriteService) {
         this.userService = userService;
         this.passwordEncoder = passwordEncoder;
+        this.favouriteService = favouriteService;
+
     }
 
     @PostMapping()
@@ -40,6 +44,7 @@ public class UserController {
         user.setUsername(username);
         user.setPassword(encodedPassword);
         userService.saveUser(user);
+        this.favouriteService.createNewFavouriteList(user);
         return ResponseEntity.ok().build();
     }
 

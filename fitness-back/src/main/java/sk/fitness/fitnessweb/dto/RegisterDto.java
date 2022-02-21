@@ -10,9 +10,13 @@ public class RegisterDto {
     @NotNull
     private String password;
 
-    public RegisterDto(@NotNull String username, @NotNull String password) {
+    @NotNull
+    private String email;
+
+    public RegisterDto(@NotNull String username, @NotNull String password, @NotNull String email) {
         this.username = username;
         this.password = password;
+        this.email = email;
     }
 
     public String getUsername() {
@@ -29,5 +33,13 @@ public class RegisterDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
