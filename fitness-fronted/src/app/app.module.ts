@@ -14,6 +14,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CardComponent } from './card/card.component';
+import { ArticleComponent } from './article/article.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
@@ -24,6 +31,11 @@ import { CardComponent } from './card/card.component';
     ExercisesComponent,
     TrainingComponent,
     SupplementsComponent,
+    CardComponent,
+    ArticleComponent,
+    LoginComponent,
+    RegisterComponent,
+    FavoritesComponent
     CardComponent
   ],
   imports: [
@@ -33,6 +45,10 @@ import { CardComponent } from './card/card.component';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
     MatExpansionModule
   ],
   providers: [],

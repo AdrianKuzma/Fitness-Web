@@ -3,7 +3,12 @@
         <mat-card-header>
           <img mat-card-avatar class="example-header-image" src="{{supplement.image}}" alt="{{supplement.name}}">
           <mat-card-title>{{ supplement.name }}</mat-card-title>
-
+<div class="flexbox">
+      <mat-card class="example-card" *ngFor="let supplement of supplements">
+        <mat-card-header>
+          
+          <mat-card-title>{{ supplement.name }}</mat-card-title>
+          <img mat-card-avatar class="example-header-image" src="{{supplement.image}}" alt="{{supplement.name}}">
           <mat-card-subtitle>Doplnok</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image class="card-image" src="{{supplement.image}}" alt="{{supplement.name}}">
@@ -14,5 +19,8 @@
           </p>
         </mat-card-content>
       </mat-card>
+  </div>
+    <div class="hero-img"></div>
+=======
     </div>
     <div class="hero-img"></div>

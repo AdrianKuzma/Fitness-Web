@@ -47,7 +47,6 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Category> getCategories() {
         return Arrays.asList(Category.values().clone());
     }
-
     @Override
     public void addToFavourites(Long id) {
         Article article = repository.findById(id).get();
@@ -66,6 +65,4 @@ public class ArticleServiceImpl implements ArticleService {
         repository.deleteById(articleId);
         return repository.findById(articleId).get();
     }
-
-
 }

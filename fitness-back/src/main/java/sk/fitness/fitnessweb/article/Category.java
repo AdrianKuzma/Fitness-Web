@@ -7,5 +7,5 @@ public enum Category {
     NOHY,
     RAMENÁ,
     TRICEPS,
-    BRUCHO,
+    BRUCHO
 }

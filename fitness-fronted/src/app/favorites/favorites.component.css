@@ -31,44 +31,15 @@
   margin: 0;
   background: #E6E6E6;
   background-repeat: no-repeat;
-=======
-body{
-  background: rgb(0, 136, 255);
-}
-.example-card {
-  max-width: 400px;
-}
-.card-image {
   background-size: cover;
   background-position: center;
   
 }
+.example-card{
+    margin-top: 50px;
+    margin-left: 100px;
+}
 mat-card-content{
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
-=======
-.example-header-image {
-
-}
-.flexbox {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 90%;
-  margin: 30px auto;
-  justify-content: center;
-}
-
-.hero-img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -10;
-  margin: 0;
-  background-image: url('../../assets/images/gym.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
