@@ -52,13 +52,19 @@ public class ArticleServiceImpl implements ArticleService {
     public void addToFavourites(Long id) {
         Article article = repository.findById(id).get();
         Favourite favourite = favouriteRepository.findByUser(userService.getCurrentUser());
-        favourite.setArticles(article);
-        favouriteRepository.save(favourite);
+        article.setFavourites(favourite);
+        repository.save(article);
     }
 
     @Override
     public List<Article> getFavouritesArticles() {
         return favouriteRepository.findByUser(userService.getCurrentUser()).getArticles();
+    }
+
+    @Override
+    public Article deleteArticleFromFavourites(Long articleId) {
+        repository.deleteById(articleId);
+        return repository.findById(articleId).get();
     }
 
 

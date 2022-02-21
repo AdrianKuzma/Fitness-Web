@@ -1,6 +1,7 @@
 package sk.fitness.fitnessweb.favourite;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import sk.fitness.fitnessweb.article.Article;
 import sk.fitness.fitnessweb.user.User;
 
@@ -17,7 +18,8 @@ public class Favourite {
     @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
-    @OneToMany
+    @ManyToMany(mappedBy = "favourites")
+    @JsonBackReference
     private List<Article> articles;
 
     public Favourite() {

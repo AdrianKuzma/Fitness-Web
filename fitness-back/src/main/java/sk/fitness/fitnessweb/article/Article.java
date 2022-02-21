@@ -1,8 +1,10 @@
 package sk.fitness.fitnessweb.article;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import sk.fitness.fitnessweb.favourite.Favourite;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Article {
@@ -23,9 +25,10 @@ public class Article {
     @Enumerated(EnumType.STRING)
     private Category category;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "favourite_id",insertable = false,updatable = false)
-    private Favourite favourite;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "article_favourite",joinColumns = @JoinColumn(name = "article_id"), inverseJoinColumns = @JoinColumn(name = "favourite_id"))
+    @JsonManagedReference
+    private List<Favourite> favourites;
 
     public String getImage() {
         return image;
@@ -75,12 +78,11 @@ public class Article {
         this.category = category;
     }
 
-    public Favourite getFavourite() {
-        return favourite;
+    public List<Favourite> getFavourites() {
+        return favourites;
     }
 
-    public void setFavourite(Favourite favourite) {
-        this.favourite = favourite;
+    public void setFavourites(Favourite favourite) {
+        this.favourites.add(favourite);
     }
-
 }
