@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -8,11 +9,14 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
-  error;
-  
 
-  constructor(private authService: AuthService) { }
+  form: FormGroup;
+  error: string;
+
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void { // main funkcia komponentu
     this.form = new FormGroup({
@@ -22,12 +26,12 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    
     if (this.form.valid) {
+      const { username, password } = this.form.value;
       
       // login na request na backend
-      this.authService.login(this.form.value.username, this.form.value.password).subscribe();
-      
+      this.authService.login(username, password)
+        .subscribe(() => this.router.navigateByUrl('/home'));
     }
   }
 

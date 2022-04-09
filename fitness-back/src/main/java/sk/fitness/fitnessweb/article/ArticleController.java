@@ -41,18 +41,4 @@ public class ArticleController {
         return articleService.getCategories();
     }
 
-    @GetMapping("/favouritesArticles")
-    public List<Article> getFavourites(){
-        return articleService.getFavouritesArticles();
-    }
-
-    @PostMapping("/addToFavourite")
-    public void addToFavourites(@RequestParam Long id){
-        articleService.addToFavourites(id);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public Article deleteArticleFromFavourites(@PathVariable Long id){
-        return articleService.deleteArticleFromFavourites(id);
-    }
 }

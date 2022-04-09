@@ -11,7 +11,7 @@ import { SupplementsComponent } from './supplements/supplements.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CardComponent } from './card/card.component';
 import { ArticleComponent } from './article/article.component';
@@ -21,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { AuthInterceptor } from './auth.interceptor';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 
@@ -52,7 +53,13 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
     MatInputModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,13 +1,20 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  private _login$ = new BehaviorSubject<boolean>(this.isLoggedIn());
+
   constructor(private httpClient: HttpClient) { }
+
+  get login$(): Observable<boolean> {
+    return this._login$.asObservable();
+  }
 
   login(username: string, password: string): Observable<any> {
     const info = btoa(`${username}:${password}`);
@@ -19,14 +26,27 @@ export class AuthService {
       }),
       withCredentials: true
     };
-    return this.httpClient.post<any>(`http://localhost:8080/login`, { username: username, password: password }).pipe(tap(() => localStorage.setItem('token', token)));
+    return this.httpClient.get<any>(`http://localhost:8080/login`, options).pipe(
+      tap(() => localStorage.setItem('token', token)),
+      tap(() => this._login$.next(true))
+    );
   }
 
-  register(username: string, password: string): Observable<any> {
-    return this.httpClient.post<any>(`http://localhost:8080/register`, { username: username, password: password });
+  register(username: string, password: string, email: string): Observable<any> {
+    return this.httpClient.post<any>(`http://localhost:8080/register`, { username, password, email });
   }
-}
-function tap(arg0: () => void): import("rxjs").OperatorFunction<any, any> {
-  throw new Error('Function not implemented.');
-}
 
+  logout(): void {
+    localStorage.removeItem('token');
+    this._login$.next(false);
+  }
+
+  isLoggedIn(): boolean {
+    return this.getToken() !== null;
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('token');
+  }
+
+}
