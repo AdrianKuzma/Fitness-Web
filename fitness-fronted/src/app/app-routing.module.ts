@@ -1,3 +1,4 @@
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'exercises', component: ExercisesComponent},
   { path: 'training', component: TrainingComponent},
   { path: 'article', component: ArticleComponent},
+  { path: 'article/:id', component: ArticleDetailComponent },
   { path: 'supplements', component: SupplementsComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},

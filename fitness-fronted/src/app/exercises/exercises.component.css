@@ -15,7 +15,6 @@ body{
 }
 
 .hero-bg{
-=======
 }
 
 .flexbox {
@@ -37,8 +36,7 @@ body{
   width: 1000px;
 
 
-=======
-  background-image: url('../../assets/images/gym.jpg');
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
