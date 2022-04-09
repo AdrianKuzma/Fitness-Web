@@ -13,6 +13,9 @@ public class RegisterDto {
     @NotNull
     private String email;
 
+    public RegisterDto() {
+    }
+
     public RegisterDto(@NotNull String username, @NotNull String password, @NotNull String email) {
         this.username = username;
         this.password = password;

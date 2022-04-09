@@ -9,8 +9,4 @@ public interface ArticleService {
     List<Article> getArticleByType(ArticleType type);
     List<Article> getExercisesFromCategory(Category category);
     List<Category> getCategories();
-    void addToFavourites(Long id);
-    List<Article> getFavouritesArticles();
-    Article deleteArticleFromFavourites(Long articleId);
-
 }
