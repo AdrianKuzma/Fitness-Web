@@ -17,8 +17,7 @@ a {
     font-size: 28px;
     color: #FFFFFF;
     text-align: center;
-    margin-left: 75px;
-    margin-left: 100px;
+    margin-left: 50px;
     text-decoration: none;
 }
 
@@ -66,4 +65,11 @@ img {
 .register{
     margin-left: 1em;
 }
-
+.login{
+    width: 249%;
+    margin-left: 35px;
+}
+.register{
+    width: 250%;
+    margin-left: 25px;
+}

@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-.brichtabomby{
-    float: right;
-    width: 30%;
-    float: right;
-    width: 29%;
+body {
+   height: 100%;
+   overflow-y: hidden;
 }
 
+.brichtabomby{
+    float: right;
+    width: 26%;
+    margin-top: 8.5em;
+}
 .hero-img{
     position: absolute;
     top: 0;

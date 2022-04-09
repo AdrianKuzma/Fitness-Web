@@ -1,4 +1,5 @@
 export enum ArticleType {
     SUPPLEMENTS = 'SUPPLEMENTS',
-    EXERCISES = 'EXERCISES'
+    EXERCISES = 'EXERCISES',
+    ARTICLES = 'ARTICLES',
 }

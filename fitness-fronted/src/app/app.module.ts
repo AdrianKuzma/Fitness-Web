@@ -21,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 
 @NgModule({
@@ -35,8 +36,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     ArticleComponent,
     LoginComponent,
     RegisterComponent,
-    FavoritesComponent
-    CardComponent
+    FavoritesComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
