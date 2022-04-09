@@ -1,4 +1,4 @@
-//import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
