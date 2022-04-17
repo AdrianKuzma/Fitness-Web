@@ -4,5 +4,4 @@ public enum ArticleType {
     SUPPLEMENTS,
     EXERCISES,
     ARTICLES
-
 }

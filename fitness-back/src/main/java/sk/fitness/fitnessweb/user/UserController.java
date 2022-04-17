@@ -39,6 +39,6 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public void login() { }
+    public void login() {}
 
 }

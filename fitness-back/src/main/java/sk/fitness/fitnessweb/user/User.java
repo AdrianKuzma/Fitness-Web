@@ -1,9 +1,9 @@
 package sk.fitness.fitnessweb.user;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import sk.fitness.fitnessweb.article.Article;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -16,12 +16,21 @@ public class User {
     private String password;
     private String email;
 
+    @ManyToMany
+    @JoinTable(
+            name = "favorite",
+            joinColumns = { @JoinColumn(name = "user_id") },
+            inverseJoinColumns = { @JoinColumn(name = "article_id") }
+    )
+    private List<Article> favorites;
+
     public User() {
     }
 
-    public User(String username, String password, String email) {
+    public User(String username, String password, String email, List<Article> favorites) {
         this.username = username;
         this.password = password;
+        this.favorites = favorites;
     }
 
     public long getId() {
@@ -56,4 +65,11 @@ public class User {
         this.email = email;
     }
 
+    public List<Article> getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(List<Article> favorites) {
+        this.favorites = favorites;
+    }
 }
