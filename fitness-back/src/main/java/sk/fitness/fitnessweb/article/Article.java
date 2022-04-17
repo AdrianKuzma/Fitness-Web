@@ -1,6 +1,10 @@
 package sk.fitness.fitnessweb.article;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import sk.fitness.fitnessweb.user.User;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Article {
@@ -20,6 +24,10 @@ public class Article {
 
     @Enumerated(EnumType.STRING)
     private Category category;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "favorites")
+    private List<User> favoriteUsers;
 
     public String getImage() {
         return image;
@@ -69,4 +77,11 @@ public class Article {
         this.category = category;
     }
 
+    public List<User> getFavoriteUsers() {
+        return favoriteUsers;
+    }
+
+    public void setFavoriteUsers(List<User> favoriteUsers) {
+        this.favoriteUsers = favoriteUsers;
+    }
 }

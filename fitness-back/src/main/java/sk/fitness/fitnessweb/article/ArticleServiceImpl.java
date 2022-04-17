@@ -1,7 +1,6 @@
 package sk.fitness.fitnessweb.article;
 
 import org.springframework.stereotype.Service;
-import sk.fitness.fitnessweb.user.UserService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,11 +10,9 @@ import java.util.Optional;
 public class ArticleServiceImpl implements ArticleService {
 
     private final ArticleRepository repository;
-    private UserService userService;
 
-    public ArticleServiceImpl(ArticleRepository repository, UserService userService) {
+    public ArticleServiceImpl(ArticleRepository repository) {
         this.repository = repository;
-        this.userService = userService;
     }
 
     @Override

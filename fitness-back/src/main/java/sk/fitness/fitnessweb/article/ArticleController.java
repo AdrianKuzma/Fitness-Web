@@ -2,6 +2,7 @@ package sk.fitness.fitnessweb.article;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sk.fitness.fitnessweb.dto.GetArticleDto;
 
 import java.util.List;
 
@@ -16,28 +17,32 @@ public class ArticleController {
     }
 
     @GetMapping
-    public List<Article> getArticles(@RequestParam(required = false) ArticleType type) {
-        if (type != null) {
-            return this.articleService.getArticleByType(type);
-        }
-        return this.articleService.getAllArticles();
+    public List<GetArticleDto> getArticles(@RequestParam(required = false) ArticleType type) {
+        return GetArticleDto.wrap(
+                type != null
+                        ? this.articleService.getArticleByType(type)
+                        : this.articleService.getAllArticles()
+        );
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Article> getArticleById(@PathVariable long id) {
-        return ResponseEntity.of(this.articleService.getArticleById(id));
+    public ResponseEntity<GetArticleDto> getArticleById(@PathVariable long id) {
+        return ResponseEntity.of(
+                this.articleService.getArticleById(id).map(GetArticleDto::wrap)
+        );
     }
 
     @GetMapping("/exercises/category")
-    public List<Article> getExercisesFromCategory(@RequestParam(required = false) Category category){
-        if(category != null){
-            return this.articleService.getExercisesFromCategory(category);
-        }
-        return this.articleService.getArticleByType(ArticleType.EXERCISES);
+    public List<GetArticleDto> getExercisesFromCategory(@RequestParam(required = false) Category category) {
+        return GetArticleDto.wrap(
+                category != null
+                        ? this.articleService.getExercisesFromCategory(category)
+                        : this.articleService.getArticleByType(ArticleType.EXERCISES)
+        );
     }
 
     @GetMapping("/exercises/allCategories")
-    public List<Category> getListOfCategories(){
+    public List<Category> getListOfCategories() {
         return articleService.getCategories();
     }
 
