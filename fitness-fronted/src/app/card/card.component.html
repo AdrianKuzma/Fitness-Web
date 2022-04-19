@@ -3,8 +3,10 @@
       <img mat-card-avatar class="example-header-image" src="https://p7.hiclipart.com/preview/544/112/40/dumbbell-computer-icons-barbell-hantel.jpg">
       <mat-card-title>{{ content.name }}</mat-card-title>
       <mat-card-subtitle>Exercise</mat-card-subtitle>
+      <mat-icon (click)="addToFavorite(content.id)" matRipple [matRippleRadius]="18" class="favorite">favorite</mat-icon>
     </mat-card-header>
-    <img mat-card-image src="{{content.image}}" alt="{{ content.name }}">
+    <iframe *ngIf="content.image.includes('embed')" class="video" mat-card-image [src]="saveVideoUrl(content.image)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img *ngIf="!content.image.includes('embed')" mat-card-image [src]="saveVideoUrl(content.image)" alt="{{ content.name }}">
     <mat-card-content>
       <p>
          {{content.description}}

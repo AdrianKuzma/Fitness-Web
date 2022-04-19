@@ -10,6 +10,7 @@ import { TrainingComponent } from './training/training.component';
 import { SupplementsComponent } from './supplements/supplements.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -23,6 +24,10 @@ import {MatInputModule} from '@angular/material/input';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatRippleModule} from '@angular/material/core';
+
 
 
 @NgModule({
@@ -51,7 +56,11 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatRippleModule
   ],
   providers: [
     {

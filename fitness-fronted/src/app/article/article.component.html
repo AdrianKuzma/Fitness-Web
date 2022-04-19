@@ -2,15 +2,17 @@
 <div class="flexbox">
 <mat-card class="example-card" *ngFor="let article of articles" [routerLink]="article.id">
     <mat-card-title>{{ article.name }}</mat-card-title>
-    <mat-card-actions align="end">
-    <img mat-card-avatar class="example-header-image" src="{{article.image}}" alt="{{article.name}}">
-    <button mat-button>Uložiť</button>
-    </mat-card-actions>
+    <div class="image">
+        <img class="example-header-image" src="{{article.image}}" alt="{{article.name}}">
+    </div>
     <mat-card-content>
         <p>
         {{article.description}}
         </p>
     </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-button (click)="addToFavorite(article.id)">Uložiť</button>
+    </mat-card-actions>
 </mat-card>
 </div>
 <div class="hero-img"></div>

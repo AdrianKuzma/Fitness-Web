@@ -1,4 +1,21 @@
 mat-card {
     margin-bottom: 10px;
-    width: 500px;
+    width: 600px;
+    margin: 10px auto;
+}
+.video {
+    aspect-ratio: 16/9;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+mat-icon{
+    font-size: 30px;
+    margin: 9px 2px 0 auto;
+    width: fit-content;
+    height: fit-content;
+}
+mat-icon:hover{
+    color: red;
 }

@@ -2,7 +2,21 @@
 
 body,html{
     font-family: 'Poppins', sans-serif;
+    height: 78%;
+    background-color: #f0f0f0;
+}
+html {
+    height: 100%;
 }
 .mat-body, .mat-body-1, .mat-typography {
     font: initial;
 }
+.mat-sidenav-backdrop.mat-sidenav-shown{
+    background-color: transparent !important;
+}
+.mat-drawer-backdrop.mat-drawer-shown {
+    background-color: transparent !important;
+  }
+  .mat-typography{
+      background: transparent;
+  }

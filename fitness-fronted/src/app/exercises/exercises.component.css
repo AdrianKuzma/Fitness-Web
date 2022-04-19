@@ -1,10 +1,14 @@
 body{
   padding: 10px 100px 50px;
+  background-color: #f0f0f0;
 }
 .example-card {
   max-width: 500px;
 }
-
+.cont, mat-sidenav-container {
+  height: 98%;
+  background-color: #f0f0f0;
+}
 .flexbox {
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +18,8 @@ body{
   justify-content: center;
 }
 
-.hero-bg{
+.sidenav{
+  width: 10%;
 }
 
 .flexbox {
@@ -24,6 +29,7 @@ body{
   width: 90%;
   margin: 30px auto;
   justify-content: center;
+  height: 100%;
 }
 .hero-img{
   position: absolute;
@@ -34,9 +40,6 @@ body{
   z-index: -10;
   margin: 0;
   width: 1000px;
-
-
-  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
