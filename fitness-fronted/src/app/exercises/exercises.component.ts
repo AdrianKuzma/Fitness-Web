@@ -12,8 +12,10 @@ import { ArticleService } from '../article.service';
 export class ExercisesComponent implements OnInit {
 
   categoryList$: Observable<any[]>;
-  
-  constructor(private articleService: ArticleService) { }
+  cardCategory;
+  constructor(private articleService: ArticleService) { 
+    this.cardCategory = "BICEPS";
+  }
 
   ngOnInit(): void {
     this.categoryList$ = this.articleService.getListOfCategories();

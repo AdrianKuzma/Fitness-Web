@@ -1,17 +1,16 @@
- <div class="flexbox">
-  <div class="flexbox">
-    <mat-accordion>
-    <mat-expansion-panel *ngFor="let category of categoryList$ | async">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{category}}
-        </mat-panel-title>
-        <mat-panel-description>
-          Exercise
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <app-card [category]="category"></app-card>
-      </mat-expansion-panel>
-    </mat-accordion>
+<button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+<div class="cont">
+    <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #snav class="sidenav" mode="over">
+      <mat-nav-list>
+        <a mat-list-item (click)="cardCategory=category" *ngFor="let category of categoryList$ | async">{{ category }}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="card" *ngFor="let category of categoryList$ | async">
+        <app-card *ngIf="category===cardCategory" [category]="category"></app-card>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
   </div>
 <div class="hero-img"></div>

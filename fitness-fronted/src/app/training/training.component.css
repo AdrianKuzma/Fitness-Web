@@ -56,13 +56,13 @@ li{
     position:absolute;
     left: 0;
     right: 0;
-    background-color: #E6E6E6;
+    background-color: rgb(255, 248, 248);
 }
 .fullbodyimage{
     position:absolute;
     left: 0;
     right: 0;
-    background-color: #E6E6E6;
+    background-color: rgb(255, 248, 248);
 }
 .img-spacer{
     height: 350px;

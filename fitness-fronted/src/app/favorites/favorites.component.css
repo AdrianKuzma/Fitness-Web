@@ -1,45 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-.example-card {
-  max-width: 400px;
-
-}
-.card-image {
-  background-size: cover;
-  aspect-ratio: 1;
-}
-.example-header-image {
-
-}
 .flexbox {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   width: 90%;
-  margin: 30px auto;
+  margin: 70px auto;
   justify-content: center;
 }
-
-.hero-img{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1000px;
-  z-index: -10;
-  margin: 0;
-  background: #E6E6E6;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
-}
-.example-card{
-    margin-top: 50px;
-    margin-left: 100px;
-}
-mat-card-content{
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+mat-accordion {
+  width: 420px;
 }
