@@ -27,6 +27,7 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatRippleModule} from '@angular/material/core';
+import { TestDetailComponent } from './test-detail/test-detail.component';
 
 
 
@@ -43,7 +44,8 @@ import {MatRippleModule} from '@angular/material/core';
     LoginComponent,
     RegisterComponent,
     FavoritesComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    TestDetailComponent
   ],
   imports: [
     BrowserModule,

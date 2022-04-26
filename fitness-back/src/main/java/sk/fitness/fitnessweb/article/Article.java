@@ -25,6 +25,12 @@ public class Article {
     @Enumerated(EnumType.STRING)
     private Category category;
 
+    @Lob
+    @JsonIgnore
+    private String content;
+
+    private String redirectUrl;
+
     @JsonIgnore
     @ManyToMany(mappedBy = "favorites")
     private List<User> favoriteUsers;
@@ -75,6 +81,22 @@ public class Article {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getRedirectUrl() {
+        return redirectUrl;
+    }
+
+    public void setRedirectUrl(String redirectUrl) {
+        this.redirectUrl = redirectUrl;
     }
 
     public List<User> getFavoriteUsers() {

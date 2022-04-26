@@ -1,6 +1,6 @@
 <div class="background">
   <div class="flexbox">
-    <mat-card class="example-card mat-elevation-z4" *ngFor="let supplement of supplements">
+    <mat-card class="example-card mat-elevation-z4" *ngFor="let supplement of supplements" (click)="redirect(supplement)">
       <mat-card-header>
         <mat-card-title>{{ supplement.name }}</mat-card-title>
         <img mat-card-avatar class="example-header-image" src="{{supplement.image}}" alt="{{supplement.name}}">

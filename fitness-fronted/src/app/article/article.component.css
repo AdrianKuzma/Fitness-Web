@@ -1,11 +1,17 @@
+.flexbox {
+    display: flex;
+    gap: 50px;
+    width: 80%;
+    margin: 35px auto;
+}
+
 .example-header-image {
     width: 85%;
-
 }
 
 .example-card {
-    margin: 35px 120px 0;
-    width: 40%;
+
+    width: 100%;
 }
 .image {
     width: 100%;

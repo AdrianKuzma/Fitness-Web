@@ -15,6 +15,10 @@ export class ArticleService {
     return this.httpClient.get<Article[]>(`http://localhost:8080/article?type=${type}`);
   }
 
+  getArticleContent(id: number): Observable<string> {
+    return this.httpClient.get(`http://localhost:8080/article/${id}/content`, { responseType: 'text' });
+  }
+
   getArticleByCategory(category): Observable<Article[]> {
     return this.httpClient.get<Article[]>(`http://localhost:8080/article/exercises/category?category=${category}`)
     // z backendu ti posle obsah rozdeleny podla kategorií

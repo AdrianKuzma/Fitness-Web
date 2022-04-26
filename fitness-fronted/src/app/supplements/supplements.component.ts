@@ -17,8 +17,15 @@ export class SupplementsComponent implements OnInit {
   ngOnInit(): void {
     this.articleService.getArticlesByType(ArticleType.SUPPLEMENTS).subscribe(supplements => this.supplements = supplements)
   }
-  addToFavorite(id: number) {
+
+  addToFavorite(id: number): void {
     this.favoriteService.addArticleToFavorites(id).subscribe();
+  }
+
+  redirect(supplement: Article): void {
+    if (supplement.redirectUrl) {
+      open(supplement.redirectUrl, '_blank');
+    }
   }
 
 }

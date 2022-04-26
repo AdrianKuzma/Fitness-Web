@@ -46,6 +46,10 @@ public class GetArticleDto {
                 .anyMatch(user -> user.getUsername().equals(username));
     }
 
+    public String getRedirectUrl() {
+        return this.article.getRedirectUrl();
+    }
+
     public static GetArticleDto wrap(Article article) {
         return new GetArticleDto(article);
     }

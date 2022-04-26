@@ -1,3 +1,4 @@
+import { TestDetailComponent } from './test-detail/test-detail.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'favorites', component: FavoritesComponent, canActivate: [AuthGuard] },
+  { path: 'test-detail', component: TestDetailComponent },
   { path: '**', redirectTo: 'home' },
 ];
 
