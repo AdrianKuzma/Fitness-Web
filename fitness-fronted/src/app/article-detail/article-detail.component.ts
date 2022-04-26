@@ -1,4 +1,4 @@
-import { Article } from './../article.model';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ArticleService } from './../article.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -10,18 +10,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ArticleDetailComponent implements OnInit {
 
-  article: Article;
+  content: SafeHtml;
 
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
+    private domSanitizer: DomSanitizer,
   ) { }
 
   ngOnInit(): void {
     const id: number = +(this.route.snapshot.paramMap.get('id') ?? 0);
 
-    this.articleService.getArticleById(id)
-      .subscribe(article => this.article = article);
+    this.articleService.getArticleContent(id)
+      .subscribe(content => this.content = this.domSanitizer.bypassSecurityTrustHtml(content));
   }
 
 }

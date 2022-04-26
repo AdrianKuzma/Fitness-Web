@@ -7,4 +7,5 @@ export interface Article {
     image: string;
     type: ArticleType;
     favorite: boolean;
+    redirectUrl: string;
 }

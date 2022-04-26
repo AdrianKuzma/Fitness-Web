@@ -32,6 +32,13 @@ public class ArticleController {
         );
     }
 
+    @GetMapping("{id}/content")
+    public ResponseEntity<String> getArticleContent(@PathVariable long id) {
+        return ResponseEntity.of(
+                this.articleService.getArticleById(id).map(Article::getContent)
+        );
+    }
+
     @GetMapping("/exercises/category")
     public List<GetArticleDto> getExercisesFromCategory(@RequestParam(required = false) Category category) {
         return GetArticleDto.wrap(
